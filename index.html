@@ -1,23 +1,215 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog tech</title>
-    <header><h1>meu blog tech</h1>
-        Vou compartilhar conhecimentos sobre tecnologia e programação
-    </header>
+    <title>O Cérebro Humano Funcional</title>
+    <style>
+        :root {
+            --primary: #00f2fe;
+            --secondary: #4facfe;
+            --dark: #0a0f1d;
+            --card-bg: #161f38;
+            --text: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 242, 254, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 242, 254, 0.1);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .interactive-section {
+            margin-top: 3rem;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .btn-stimulate {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn-stimulate:hover {
+            opacity: 0.9;
+        }
+
+        .neuron-display {
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+            min-height: 40px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+            color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <h1>O Cérebro Humano Funcional</h1>
+        <p>Uma jornada pelas funções e mistérios da nossa máquina mais complexa</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Como o cérebro funciona?</h2>
+            <p>O cérebro é o centro de controle do corpo humano. Ele processa informações sensoriais, coordena os movimentos, armazena memórias e gera nossos pensamentos e emoções através de uma rede de bilhões de neurônios que se comunicam incessantemente.</p>
+        </section>
+
+        <section class="grid">
+            <div class="card" onclick="showFunction('Lobo Frontal', 'Responsável pelo pensamento consciente, planejamento, raciocínio, tomada de decisões e controle dos movimentos voluntários.')">
+                <h3>🧠 Lobo Frontal</h3>
+                <p>Decisões, planejamento, movimentos e a nossa personalidade.</p>
+            </div>
+
+            <div class="card" onclick="showFunction('Lobo Parietal', 'Processa estímulos sensoriais como o tato, a dor, a temperatura e a orientação espacial do corpo.')">
+                <h3>Sensorial (Parietal)</h3>
+                <p>Processamento do tato, dor, temperatura e percepção espacial.</p>
+            </div>
+
+            <div class="card" onclick="showFunction('Lobo Occipital', 'É o centro de processamento visual do cérebro. Transforma a luz recebida pelos olhos em imagens que entendemos.')">
+                <h3>👁️ Lobo Occipital</h3>
+                <p>Responsável exclusivo pela nossa visão e percepção visual.</p>
+            </div>
+
+            <div class="card" onclick="showFunction('Lobo Temporal', 'Crucial para o processamento da audição, linguagem e desempenha um papel fundamental na memória de longo prazo.')">
+                <h3>🎵 Lobo Temporal</h3>
+                <p>Audição, memória, reconhecimento de rostos e linguagem.</p>
+            </div>
+
+            <div class="card" onclick="showFunction('Cerebelo', 'Coordena os movimentos musculares voluntários, mantém o equilíbrio, a postura e a precisão motora.')">
+                <h3>⚖️ Cerebelo</h3>
+                <p>Coordenação motora, equilíbrio e precisão dos movimentos.</p>
+            </div>
+
+            <div class="card" onclick="showFunction('Tronco Encefálico', 'Controla as funções vitais e involuntárias básicas, como os batimentos cardíacos, a respiração e a pressão arterial.')">
+                <h3>⚡ Tronco Encefálico</h3>
+                <p>Funções vitais automáticas como respirar e bater o coração.</p>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h2>Laboratório de Estimulação Neural</h2>
+            <p>Clique no botão para simular um impulso elétrico e gerar uma reação funcional no cérebro artificial:</p>
+            <button class="btn-stimulate" onclick="stimulateBrain()">Disparar Sinapse</button>
+            <div id="neuronDisplay" class="neuron-display">Clique acima para começar...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Criado para fins educacionais sobre neurociência funcional.</p>
+    </footer>
+
+    <script>
+        // Função para mostrar detalhes dos lobos ao clicar
+        function showFunction(title, description) {
+            const display = document.getElementById('neuronDisplay');
+            display.style.color = '#00f2fe';
+            display.innerHTML = `<strong>${title}:</strong> ${description}`;
+        }
+
+        // Função do simulador de sinapses
+        const insights = [
+            "🧠 Sinapse disparada! O Hipocampo guardou uma nova memória.",
+            "⚡ Impulso elétrico enviado! O Lobo Occipital processou uma imagem rápida.",
+            "🎵 Dopamina liberada no sistema de recompensa: Sensação de bem-estar!",
+            "🏃 Adrenalina sinalizada pelo tronco encefálico: Seus reflexos aumentaram.",
+            "💡 Nova conexão criada: Você acabou de aprender um conceito novo!"
+        ];
+
+        function stimulateBrain() {
+            const display = document.getElementById('neuronDisplay');
+            display.style.color = '#a78bfa'; // Cor roxa para os disparos
+            
+            // Escolhe um insight aleatório
+            const randomIndex = Math.floor(Math.random() * insights.length);
+            display.innerText = insights[randomIndex];
+        }
+    </script>
 </body>
 </html>
-<header>
-<h1>Meu blog tech</h1>
-<p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
-</header>
-<main>
-<h2>Meu primeiro post</h2>
-<p>Por: Marcelo Paludetto</p>
-<p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-</main>
